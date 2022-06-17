@@ -3,28 +3,55 @@
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
-  this.price = 0;
+  this.sizePrice = 0;
+  this.toppingsPrice = 0;
+
 }
 
 Pizza.prototype.SizePrice = function() {
 if (this.size === "small") {
-  this.price += 10;
+  this.sizePrice += 10;
 }
 if (this.size === "medium") {
-  this.price += 15;
+  this.sizePrice += 15;
 }
-else {
-  this.price += 20;
+if (this.size === "large") {
+  this.sizePrice += 18;
 }
-return this.price;
+return this.sizePrice;
 }
 
-Pizza.prototype.ToppingAdd = function() {
-  if (this.toppings.length = 1 ){
-    this.price += 2;
+Pizza.prototype.ToppingPrice = function() {
+  if (this.toppings.length === 1 ){
+    this.toppingsPrice += 2;
   };
-  return this.price;
+  if (this.toppings.length === 2 ) {
+   this.toppingsPrice += 4;
+  }
+  else {
+    this.toppingsPrice += 6;
+  }
+  return this.toppingsPrice;
 }
 
-customersPizza = new Pizza ("medium", "cheese");
+
+// Pizza.prototype.Cashier = function() {
+//   this.totalPrice = 0;
+//   this.totalPrice = this.totalPrice + this.sizePrice;
+//   return this.totalPrice;
+
+
+// }
+
+//UI Logic
+
+customersPizza = new Pizza ("medium", ["cheese", "ham"]);
 customersPizza.SizePrice();
+customersPizza.ToppingPrice();
+
+
+// customersPizza.Cashier();
+
+
+console.log(customersPizza.sizePrice);
+console.log(customersPizza.toppingsPrice);
