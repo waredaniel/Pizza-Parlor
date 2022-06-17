@@ -6,7 +6,6 @@ function Pizza(size, toppings) {
   this.sizePrice = 0;
   this.toppingsPrice = 0;
   this.totalPrice = 0;
-
 }
 
 Pizza.prototype.SizePrice = function() {
@@ -38,11 +37,9 @@ Pizza.prototype.ToppingPrice = function() {
   return this.toppingsPrice;
 }
 
-
 Pizza.prototype.Cashier = function() {
   this.totalPrice = this.toppingsPrice + this.sizePrice;
   return this.totalPrice; 
-
 
 }
 
@@ -51,7 +48,6 @@ Pizza.prototype.Cashier = function() {
 $(document).ready(function() {
   $("form#customerorder").submit(function(event) {
     event.preventDefault();
-    
     
     let toppingsChoice = [];
     $("input:checkbox[name=toppings]:checked").each(function() {
@@ -63,13 +59,7 @@ $(document).ready(function() {
     customersPizza.SizePrice();
     customersPizza.ToppingPrice();
   
-
-
   $("#ordertotal").text("Your order comes to: $" + customersPizza.Cashier());
 });
 });
-
-console.log(customersPizza.sizePrice);
-console.log(customersPizza.toppingsPrice);
-console.log(customersPizza.totalPrice);
 

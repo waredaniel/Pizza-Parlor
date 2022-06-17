@@ -10,9 +10,11 @@ body {
 }
 
 .menu {
-  background-color: rgb(237, 237, 237);
+  background-color: #e9ecef;
   margin-left: 25%;
   margin-right: 25%;
+  border-radius: 0.3rem;
+  padding:5%;
 }
 
 .submit {
@@ -22,4 +24,9 @@ align-self: center;
 
 .orderplaced {
   text-align:center;
+}
+
+#ordertotal {
+background-color: #ffffff;
+
 }
