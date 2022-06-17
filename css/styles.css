@@ -1,0 +1,25 @@
+.jumbotron {
+  display:block;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+}
+
+body {
+  background-image: url("../img/tablecloth.jpeg")
+}
+
+.menu {
+  background-color: rgb(237, 237, 237);
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.submit {
+display: block;
+align-self: center;
+}
+
+.orderplaced {
+  text-align:center;
+}

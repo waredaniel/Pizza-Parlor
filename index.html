@@ -10,29 +10,30 @@
 <body>
    <div>
     <div class="jumbotron">
-      <h1>Welcome!</h1>
-      <h2>Let Me Take Your Order</h2>
+      <h1>How about some Pizza?</h1>
+      <h2>Allow Me To Take Your Order</h2>
     </div>
     <div>
+      <div class="menu">
       <form id="customerorder">
           <div class="form-group">
             <h3>Please Select Your Size:</h3>
             <div class="radio">
               <label>
                 <input type="radio" name="size" value="Small" checked>
-                Small
+                Small ($10)
               </label>
             </div>
             <div class="radio">
               <label>
                 <input type="radio" name="size" value="Medium">
-                Medium
+                Medium ($15)
               </label>
             </div>
             <div class="radio">
               <label>
                 <input type="radio" name="size" value="Large">
-                Large
+                Large ($18)
               </label>
             </div>
           </div>
@@ -46,24 +47,17 @@
             <input type="checkbox" name="toppings" value="spinach">Spinach<br>
             <input type="checkbox" name="toppings" value="tomatoes">Tomatoes<br>
           </div>
-          <button type="submit">Place Order!</button>
+          <button class="submit" type="submit">Place Order!</button>
       </form>
+      <br>
       <div class="orderplaced">
         <span id="ordertotal">
           <p></p>
         </span>
       </div>
+      </div>
 
     </div>
-
-
-
-
-
-
    </div>
-
-
-
 </body>
 </html>
